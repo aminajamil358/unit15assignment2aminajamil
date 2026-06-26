@@ -1,50 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Meow Café</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meow Café</title>
+  <style>
+    /* ====== COLOUR PALETTE ====== */
+    :root {
+      --dark: #222222;
+      --pink: #EB119E;
+      --light-pink: #FEBAE6;
+      --grey: #E0E0E0;
+      --cream: #FFF5E1;
+    }
 
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--cream);
+      color: var(--dark);
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      background-color: var(--pink);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background-color: var(--light-pink);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.8rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--pink);
+    }
+
+    /* ====== MAIN CONTENT ====== */
+    .intro {
+      text-align: center;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .intro h2 {
+      color: var(--pink);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ====== FOOTER ====== */
+    footer {
+      background-color: var(--grey);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--pink);
+      text-decoration: none;
+    }
+  </style>
+</head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-    <h1>MEOW CAFE</h1>
-    <p class="logo-sub">club co.</p>
-</header>
+  <header>
+    <h1>🐾 Meow Café 🐾</h1>
+    <p>Where coffee meets cats</p>
+  </header>
 
-<!-- COLOUR PALETTE -->
-<section class="palette">
-    <div class="colour black">#222222</div>
-    <div class="colour pink">#EB119E</div>
-    <div class="colour lightpink">#FEBAE6</div>
-    <div class="colour grey">#E0E0E0</div>
-</section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<!-- LOGO CARDS -->
-<section class="logos">
-    <div class="card dark">MEOW CAFE</div>
-    <div class="card light">MEOW CAFE</div>
-    <div class="card pink-card">🐱</div>
-</section>
-
-<!-- TEXT BOX -->
-<section class="intro">
+  <section class="intro" id="home">
     <h2>Welcome to Meow Café</h2>
-    <p>
-        A cosy space where you can relax, enjoy quality drinks,
-        and spend time with friendly rescue cats.
-    </p>
-</section>
+    <p>A cosy retreat where rescue cats meet coffee lovers. Enjoy handcrafted drinks, homemade treats, and the soothing company of our feline friends.</p>
+  </section>
 
-<!-- IMAGE GRID -->
-<section class="gallery">
-    <img src="images/cat.jpg" alt="Cat">
-    <img src="images/cafe.jpg" alt="Cafe">
-    <img src="images/croissant.jpg" alt="Food">
-</section>
+  <section class="gallery" id="gallery">
+    <img src="cat.jpg" alt="Friendly cat enjoying the café">
+    <img src="cafe.jpg" alt="Interior of Meow Café">
+    <img src="food.jpg" alt="Delicious treats served at Meow Café">
+  </section>
+
+  <footer>
+    <p>© 2026 Meow Café | Designed by Amina for BTEC Level 3 Computing</p>
+    <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+  </footer>
 
 </body>
-</html>
-``
