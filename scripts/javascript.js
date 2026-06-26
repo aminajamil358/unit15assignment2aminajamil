@@ -1,7 +1,3 @@
-function sayHi() {
- 
-    alert("Hi!");
-
-}
+console.log("Meow Café website loaded");
 
  
